@@ -1,0 +1,27 @@
+.Line{
+	margin-top: -20px;
+}
+body{
+	background-color: #2f4050;
+}
+
+.col-sm-10{
+	background-color: #ffffff;
+}
+
+#Side_menu a{
+	color: #9fb1c2;
+}
+
+#Side_menu .active a{
+color: #ffffff;
+background-color:#2faae1;	
+	
+}
+
+#Side_menu a:hover{
+color: #ffffff;
+background-color:#1ab394;	
+display:block;
+	
+}

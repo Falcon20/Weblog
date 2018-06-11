@@ -1,0 +1,22 @@
+<?php require_once("Include/sessions.php");?>
+<?php require_once("Include/functions.php");?>
+<?php require_once("Include/db.php"); ?>
+<?php
+if(isset($_GET['id'])){
+	$IDFromURL=$_GET['id'];
+	$Admin=$_SESSION['Username'];
+	$sql="UPDATE comments SET status='ON',approvedby='$Admin' WHERE id='$IDFromURL'";
+			$result=mysqli_query($con,$sql);
+			if($result){
+				$_SESSION["SuccessMessage"]="Comment Approved Successfully";
+				Redirect_to("Comments.php");
+			}
+			else{
+				
+				$_SESSION["ErrorMessage"]="Something went wrong. Try Again!";
+				Redirect_to("Comments.php");
+				
+			}
+}
+
+?>
